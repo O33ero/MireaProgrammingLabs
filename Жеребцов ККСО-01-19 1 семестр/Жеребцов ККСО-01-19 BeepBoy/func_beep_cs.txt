@@ -1,0 +1,7 @@
+        public static void BB(int id, string func, string prog)
+    {
+
+        StreamWriter file = new StreamWriter("C:\\logs\\log.txt", true);
+        file.Write($"BeepBoy_{id} is activated in {func}() in {prog}\n");
+	    file.Close();
+    }

@@ -1,6 +1,0 @@
-void BB(int id, const char* func, const char* prog)
-{
-	FILE* file; file = fopen("C:\\logs\\log.txt", "a");
-	fprintf(file, "BeepBoy_%d is activated in %s() in %s\n", id, func, prog);
-	fclose(file);
-}
