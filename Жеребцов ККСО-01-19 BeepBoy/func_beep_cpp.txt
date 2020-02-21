@@ -1,0 +1,7 @@
+#include <fstream>
+void BB(int id, const char* func, const char* prog)
+{
+	std::ofstream file("C:\\logs\\log.txt", std::ios_base::app);
+	file << "BeepBoy_" << id << " is activated in " << func << "() in " << prog << "\n";
+	file.close();
+}
