@@ -10,7 +10,7 @@ struct marshrut
 };
 
 
-int cmp_const(char* str1, const char* str2)                                        // Сравнение строки с константной строкой
+int cmp_const(char* str1, const char* str2)                            // Сравнение строки с константной строкой
 {
 	int i;
 	if (str1 == NULL || str2 == NULL)
@@ -32,7 +32,7 @@ int cmp_const(char* str1, const char* str2)                                     
 	return 1;
 }
 
-int cmp(char* str1, char* str2)                                        // Сравнение двух строк
+int cmp(char* str1, char* str2)                                         // Сравнение двух строк
 {
 	int i;
 	if (str1 == NULL || str2 == NULL)
@@ -54,7 +54,7 @@ int cmp(char* str1, char* str2)                                        // Сра
 	return 1;
 }
 
-void cpy(char* str1, char* str2)										// Копирование строки str1 в строки str2
+void cpy(char* str1, char* str2)				          // Копирование строки str1 в строки str2
 {
 	for (int i = 0; ; i++)
 	{
@@ -65,7 +65,8 @@ void cpy(char* str1, char* str2)										// Копирование строки
 
 }
 
-void printway(struct marshrut a)                                         // Вывод маршрута
+
+void printway(struct marshrut a)                                           // Вывод маршрута                            
 {
 	printf("#%d  %s --%g--> %s\n", a.number, a.nameA, a.distance, a.nameB);
 }
@@ -98,7 +99,7 @@ void command_short(struct marshrut* data, int last_i)
 void command_fromto(struct marshrut* data, int last_i)
 {
 	int is_found = 0;
-	char temp1[16] = "";                                    // Временная переменная для хранения параметров команды
+	char temp1[16] = "";                         // Временная переменная для хранения параметров команды                                            
 
 	scanf("%16s", temp1);
 
@@ -126,7 +127,8 @@ void command_change(struct marshrut* data, int last_i)
 
 	scanf("%d %d", &temp1_int, &temp2_int);
 
-	for (int i = 0; i <= last_i; i++)                         // Проверка на корректность изменений
+	// Проверка на корректность изменений
+	for (int i = 0; i <= last_i; i++)                                    
 	{
 		if (data[i].number == temp2_int)
 		{
@@ -153,8 +155,8 @@ void command_change(struct marshrut* data, int last_i)
 		}
 	}
 
-
-	if (is_found == 0)                                         // Нет совпадений
+	// Нет совпадений
+	if (is_found == 0)
 		printf("No matches.\n");
 
 	printf("\n\n");
