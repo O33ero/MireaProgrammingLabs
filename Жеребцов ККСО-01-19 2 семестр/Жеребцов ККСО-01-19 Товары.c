@@ -1,5 +1,6 @@
 ﻿/*Жеребцов ККСО-01-19 Товары*/
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 struct Item
@@ -21,9 +22,10 @@ int main()
 	float prices[] = { 12000, 2000, 200, 9, 12, 6100, 441, 256, 65, 25 };
 	char* producers[] = { "Microsoft", "VAZ", "APPLE", "Xiaomi", "Domik v derevne", "Blizzard", "Volga", "IKEA", "MIREA", "HomeMade" };
 	char* dates[] = { "1.9.2000", "1.1.2010", "3.3.2030", "monday", "13.10.2001", "1.12.2020", "30.2.2010", "31.9.2000", "11.2.1992", "4.12.2001" };
+	/***Извините***/
 	
 	struct Item data[10];
-	struct Item temp;
+
 
 	for (int i = 0; i < 10; i++)
 	{
