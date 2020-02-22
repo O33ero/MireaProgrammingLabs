@@ -13,7 +13,7 @@ struct Mountain
 
 int main()
 {
-	struct Mountain data[3];
+	struct Mountain data[15];
 
 	int h;
 	char name[15][32];       // 15 строк (указателей) по 32 символа
