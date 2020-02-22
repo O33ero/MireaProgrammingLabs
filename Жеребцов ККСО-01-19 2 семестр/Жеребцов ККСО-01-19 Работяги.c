@@ -1,6 +1,7 @@
 ﻿/*Жеребцов ККСО-01-19 Работяги*/
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 struct Worker
 {
