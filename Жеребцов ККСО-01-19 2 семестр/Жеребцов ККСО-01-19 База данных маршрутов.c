@@ -1,6 +1,5 @@
 /*Жеребцов ККСО-01-19 База данных маршрутов */
 #include <stdio.h>
-#include <malloc.h>
 
 struct marshrut
 {
