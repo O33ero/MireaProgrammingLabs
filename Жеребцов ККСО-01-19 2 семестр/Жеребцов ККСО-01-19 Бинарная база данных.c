@@ -1,4 +1,5 @@
-﻿#include <stdio.h>
+/* Жеребцов ККСО-01-19 Бинарная база данных студентов */
+#include <stdio.h>
 #include <malloc.h>
 struct students
 {
