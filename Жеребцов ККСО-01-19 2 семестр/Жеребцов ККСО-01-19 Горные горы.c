@@ -1,6 +1,5 @@
 ﻿/*Жеребцов ККСО-01-19 Горные горы*/
 #include <stdio.h>
-#include <malloc.h>
 
 struct Mountain
 {
