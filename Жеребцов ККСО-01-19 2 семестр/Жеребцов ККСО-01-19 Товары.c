@@ -1,5 +1,6 @@
 ﻿/*Жеребцов ККСО-01-19 Товары*/
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 struct Item
