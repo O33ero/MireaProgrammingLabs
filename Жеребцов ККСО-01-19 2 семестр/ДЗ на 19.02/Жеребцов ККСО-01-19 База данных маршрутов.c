@@ -10,7 +10,10 @@ struct marshrut
 };
 
 
-int cmp_const(char* str1, const char* str2)                            // Сравнение строки с константной строкой
+
+/***Функции утилитки***/
+
+int cmp_const(char* str1, const char* str2)                // Сравнение строки с константной строкой
 {
 	int i;
 	if (str1 == NULL || str2 == NULL)
@@ -32,7 +35,7 @@ int cmp_const(char* str1, const char* str2)                            // Сра
 	return 1;
 }
 
-int cmp(char* str1, char* str2)                                         // Сравнение двух строк
+int cmp(char* str1, char* str2)                           // Сравнение двух строк
 {
 	int i;
 	if (str1 == NULL || str2 == NULL)
@@ -72,7 +75,7 @@ void printway(struct marshrut a)                                           // В
 }
 
 
-// Функцианал
+/***Функцианал программы***/
 
 // Самое короткое расстояние
 void command_short(struct marshrut* data, int last_i)
@@ -137,6 +140,7 @@ void command_change(struct marshrut* data, int last_i)
 		}
 	}
 
+	// Ошибка изменения номера. Такой номер уже существует.
 	if (is_found == 1)
 	{
 		printf("Cannot change number.");
@@ -254,7 +258,6 @@ int main()
 	while (last_i != -1)
 	{
 		char dash;                                              // Наличие тире перед командой
-		double temp1_int, temp2_int;                            // Временная переменная для хранения числовых параметров команды
 		char command[16] = "";									// Команда
 		fgets(command, 16, stdin);                              // Забирает мусор из ввода
 		scanf("%c%16s", &dash, command);
