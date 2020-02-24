@@ -27,12 +27,13 @@ int main()
 	for (int i = 0; i < 10; i++)
 	{
 
-		sprintf(data[i].name, "%s", names[rand() % 10]);
+		sprintf(data[i].name, "%s", names[rand() % 10]); 
 		data[i].year = years[rand() % 10];
-		sprintf(data[i].post, "%s", posts[rand() % 10]); // Костыль #2
+		sprintf(data[i].post, "%s", posts[rand() % 10]); 
 		data[i].pay = pays[rand() % 10];
-		sprintf(data[i].education, "%s", educations[rand() % 10]);
+		sprintf(data[i].education, "%s", educations[rand() % 10]); 
 
+		printf("%s borns in %d, studied in %s and holds post %s, gets %d $.\n", data[i].name, data[i].year, data[i].education, data[i].post, data[i].pay);
 	}
 
 	printf("----- age > 60 ----- \n\n");

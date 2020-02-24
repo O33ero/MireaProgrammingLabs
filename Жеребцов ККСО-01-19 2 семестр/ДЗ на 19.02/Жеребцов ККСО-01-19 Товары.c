@@ -34,7 +34,7 @@ int main()
 		data[i].count = counts[rand() % 10];
 		data[i].price = prices[rand() % 10];
 		sprintf(data[i].produce, "%s", producers[rand() % 10]); // Костыль #2
-		sprintf(data[i].date, "%s", dates[rand() % 10]);
+		sprintf(data[i].date, "%s", dates[rand() % 10]); // Костыль #3
 
 		printf("%s in counts = %d and price = %g produce by %s delivered on %s.\n", data[i].name, data[i].count, data[i].price, data[i].produce, data[i].date);
 	}
