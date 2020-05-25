@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include <map>
 #include <string>
@@ -20,8 +20,8 @@ int main()
     setlocale(LC_CTYPE, "");
 
 
-    ifstream file("1.txt");
-    ofstream ofile("resultSanya.csv");
+    ifstream file("3.txt");
+    ofstream ofile("result.csv");
     ofile << "Символ" << ';' << "Количество" << ';' << "Процент" << ';' << ';' << "Символ" << ';' << "Количество" << ';' << "Процент" << endl;
     if (!file)
     {
