@@ -64,7 +64,7 @@ int main(int argv[], char* argc[])
 
 	if (epoll_ctl(efd, EPOLL_CTL_ADD, sd, &listener) < 0)
 	{
-		perror("hueta!!!\n");
+		perror("epoll control error..\n");
 		return -1;
 	}
 
