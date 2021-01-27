@@ -1,7 +1,7 @@
 import sys
 
 
-alphabet = "13579ABCDEFGHJKLMNPQRSTUVWXYZ" #"123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz" - Base58
+alphabet = "13579ABCDEFGHJKLMNPQRSTUVWXYZ" #"123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz" - Алфавит Base58
 
 # Шифрование
 def encry(file): 
@@ -81,6 +81,7 @@ def decry(file):
 
 #   main
 
+print("Еnter encryption mode and filename\n -d - decrypting \n -e - encrypting \n>>> ", end = '')
 command, file = input().split()
 
 if command == '-d':
