@@ -10,7 +10,7 @@
 
 section .bss
     d resb 4     ; Какое-то число, которое нужно вывести
-    d_BCD resb 4 ; Упакованное BCD-число 
+    d_BCD resb 2 ; Упакованное BCD-число 
     t resb 1     ; временная переменная (навсякий случай)
         
 section .text:
@@ -21,7 +21,7 @@ _start:
     push ebx
     
     
-    mov eax, 1645
+    mov eax, 9420
     mov [d], eax    ; теперь в d лежит какое-то число,
                     ; которое мы хотим вывести
                     
@@ -88,7 +88,6 @@ p5: ;Вывод BCD-числа, лежащего в CX
     
     L1000:; Тысячи
     mov eax, [d_BCD]
-    mov ecx, 0
     mov cl, ah
     
     mov eax, ecx
@@ -118,7 +117,6 @@ p5: ;Вывод BCD-числа, лежащего в CX
         
     L100:; Сотни
     mov eax, [d_BCD]
-    mov ecx, 0
     mov cl, ah
     
     mov eax, ecx
@@ -151,7 +149,6 @@ p5: ;Вывод BCD-числа, лежащего в CX
         
     L10:; Десятки
     mov eax, [d_BCD]
-    mov ecx, 0
     mov cl, al
     
     mov eax, ecx
@@ -184,7 +181,6 @@ p5: ;Вывод BCD-числа, лежащего в CX
         
     L1:; Единицы
     mov eax, [d_BCD]
-    mov ecx, 0
     mov cl, al
     
     mov eax, ecx
