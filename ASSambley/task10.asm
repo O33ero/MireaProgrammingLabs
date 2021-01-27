@@ -1,11 +1,12 @@
 section .data:
-    str1 db '1', 0
-    str2 db '8', 0
+    str1 db '4', 0
+    str2 db '3', 0
 
 section .bss
     one resb 1 ; 
     r resb 1 ;
     t resb 1 ;
+    bool resb 1 ; boolean переменная
         
 section .text:
     global _start
@@ -98,6 +99,8 @@ m1:
     mov edx, 1
     int 0x80
     
+    mov eax, 1
+    mov [bool], eax
     
     
 m2:
@@ -107,11 +110,16 @@ m2:
     add al, 0x30
     mov [t], al
     
-    cmp al, 0
+    cmp al, 0x30
     jne L1
-    jmp L2
     
+    mov ebx, [bool]
+    cmp ebx, 1
+    je L1
+    
+    jmp L2
     L1:
+        
         mov eax, 4
         mov ebx, 1
         mov ecx, t
