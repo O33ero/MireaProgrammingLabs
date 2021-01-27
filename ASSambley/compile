@@ -1,0 +1,5 @@
+#!/bin/bash
+
+nasm -felf32 $1 -o result.o
+ld result.o -m elf_i386 -o result
+./result 98 8
