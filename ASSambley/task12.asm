@@ -10,7 +10,7 @@
 
 section .bss
     d resb 4     ; Какое-то число, которое нужно вывести
-    d_BCD resb 2 ; Упакованное BCD-число 
+    d_BCD resb 4 ; Упакованное BCD-число 
     t resb 1     ; временная переменная (навсякий случай)
         
 section .text:
@@ -21,12 +21,10 @@ _start:
     push ebx
     
     
-    mov eax, 9420
+    mov eax, 1645
     mov [d], eax    ; теперь в d лежит какое-то число,
                     ; которое мы хотим вывести
                     
-       
-   
    ; Будем собирать упакованное BCD-число в CX
                 
 p1: ; Единицы
@@ -80,14 +78,13 @@ p4: ; Тысячи
     add ch, dl 
     
 p5: ;Вывод BCD-числа, лежащего в CX
-    
 
     mov [d_BCD], cx
     mov ecx, 0
-    
-    
+       
     L1000:; Тысячи
     mov eax, [d_BCD]
+    mov ecx, 0
     mov cl, ah
     
     mov eax, ecx
@@ -112,11 +109,11 @@ p5: ;Вывод BCD-числа, лежащего в CX
         pop ebx
         mov ebx, 1
         push ebx
-        
-        
+          
         
     L100:; Сотни
     mov eax, [d_BCD]
+    mov ecx, 0
     mov cl, ah
     
     mov eax, ecx
@@ -149,6 +146,7 @@ p5: ;Вывод BCD-числа, лежащего в CX
         
     L10:; Десятки
     mov eax, [d_BCD]
+    mov ecx, 0
     mov cl, al
     
     mov eax, ecx
@@ -181,6 +179,7 @@ p5: ;Вывод BCD-числа, лежащего в CX
         
     L1:; Единицы
     mov eax, [d_BCD]
+    mov ecx, 0
     mov cl, al
     
     mov eax, ecx
@@ -196,9 +195,7 @@ p5: ;Вывод BCD-числа, лежащего в CX
         mov ecx, t
         mov edx, 1
         int 0x80
-    
-    
-    
+ 
 
 end:
     mov eax, 1
