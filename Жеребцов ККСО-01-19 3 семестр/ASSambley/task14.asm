@@ -62,7 +62,6 @@ loop2:
     loop loop2
     
 end:
-    
 
     mov eax, 1
     mov ebx, 0
