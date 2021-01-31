@@ -196,7 +196,6 @@ p5: ;Вывод BCD-числа, лежащего в CX
         mov edx, 1
         int 0x80
  
-
 end:
     mov eax, 1
     mov ebx, 0
