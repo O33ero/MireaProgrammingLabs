@@ -32,7 +32,6 @@ loop1:
     
         
 end:
-    
 
     mov eax, 1
     mov ebx, 0
