@@ -38,8 +38,6 @@ loop1:
     pop ecx
     loop loop1
     
-    
-    
 ;   Гамма-шифрование
     
     lea esi, [buffer]
